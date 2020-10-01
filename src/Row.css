@@ -1,0 +1,35 @@
+.row {
+  margin-left: 20px;
+}
+
+.row_posters {
+  /*use flex box*/
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px; /*padding is needed for transfrom to be work.*/
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row_poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  transition: transform 450ms;
+  margin-right: 10px;
+}
+
+.row_poster:hover {
+  transform: scale(1.08); /*need to the padding to make it work*/
+}
+
+.row_posterLarge {
+  max-height: 250px;
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.09);
+}
